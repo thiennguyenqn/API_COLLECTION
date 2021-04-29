@@ -1,1 +1,15 @@
 GET TOKEN: https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed
+GET LOCATION USER: https://graph.facebook.com/v7.0/{id}?fields=username,..location{location{city,state,latitude,longitude,region_id}}&access_toke={token}
+GET LOCATION PAGE: https://graph.facebook.com/{graph-api-version}/{page-id}?fields=location&access_token={page-access-token}
+UP POST TO PAGE: https://graph.facebook.com/idPage/feed?method=post&privacy=allow&message={Nội dung}&link={link bài viết muốn share}&access_token={token page}
+GET LIST FRIEND:https://graph.facebook.com/v7.0/me/friends?access_token={token}& limit=5000&fields=id,name
+GET LIST PAGE: https://graph.facebook.com/me/likes?fields=id,name&access_token={token}
+GET UID POST:https://graph.facebook.com/me/posts?limit=5000&fields=id,name&access_token={token}
+GET REACTION UID POST: https://mbasic.facebook.com/ufi/reaction/profile/browser/fetch/?limit=200&total_count=60&ft_ent_identifier={id post}
+https://m.facebook.com/ufi/reaction/profile/browser/fetch/?limit=500&total_count=500&ft_ent_identifier={id post}
+
+GET ID POST OTHER USER:https://graph.facebook.com/fql?access_token={token}&q=SELECT+post_id%2C+actor_id%2C+target_id%2C+message%2C+created_time+FROM+stream+WHERE+source_id%3D{id user/page cần lấy}+LIMIT+{số lượng post cần lấy}
+COMMENT POST: url: https://graph.facebook.com/{id bài viết cần cmt}/comments/param[access_token={token}&message={nội dung cmt}+&attachment_url={Link ảnh đính kèm}]
+UNFOLLOW FRIEND [post with cookie]: https://m.facebook.com/a/subscriptions/remove + param:fb_dtsg={fb_dtsg}&subject_id={id cần unfl}&forceredirect=false&location=83
+
+Api check email: https://thakkaha.dev.fast.sheridanc.on.ca/pme/email-status/status.php?address={email}// có giới hạn số lần request
