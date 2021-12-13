@@ -1,0 +1,5 @@
+//API Mocha Video
+http://apivideo.mocha.com.vn:8081/onMediaBackendBiz/mochavideo/listVideoByCate?categoryid=1&limit=50&offset=10&lastIdStr=&token=
+
+//API Vieon Event
+https://api.vieon.vn/backend/cm/v5/ribbon/4bdad485-9048-4c15-970e-e94ce4a595b9?page=0&limit=30&platform=web&ui=012021
